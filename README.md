@@ -1,5 +1,9 @@
 # Claude.ai Chat Exporter
 
+<p align="center">
+  <img src="icons/icon.png" alt="Claude.ai Chat Exporter" width="128" height="128">
+</p>
+
 A Chrome extension that allows you to export your Claude.ai conversations to Markdown or JSON format.
 
 ## Features
@@ -22,11 +26,10 @@ A Chrome extension that allows you to export your Claude.ai conversations to Mar
 
 ### Manual Installation
 1. Download or clone this repository
-2. Download Turndown.js from https://unpkg.com/turndown/dist/turndown.js and save it in the extension folder
-3. Open Chrome and navigate to `chrome://extensions/`
-4. Enable "Developer mode" (toggle in the top-right corner)
-5. Click "Load unpacked"
-6. Select the folder containing the extension files
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" (toggle in the top-right corner)
+4. Click "Load unpacked"
+5. Select the folder containing the extension files
 
 ## Usage
 
