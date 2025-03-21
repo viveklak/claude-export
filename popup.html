@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Claude.ai Chat Exporter</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #5436DA;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #4525c4;
+    }
+    #debugPage {
+      background-color: #777;
+    }
+    #status {
+      margin-top: 15px;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Claude.ai Chat Exporter</h1>
+  <div class="button-container">
+    <button id="exportMarkdown">Export as Markdown</button>
+    <button id="exportJSON">Export as JSON</button>
+    <button id="debugPage">Debug Page Structure</button>
+  </div>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

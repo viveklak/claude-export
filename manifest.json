@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Claude.ai Chat Exporter",
+  "version": "1.0",
+  "description": "Export Claude.ai conversations to Markdown or JSON format",
+  "permissions": ["activeTab", "scripting", "downloads", "tabs"],
+  "host_permissions": ["https://claude.ai/*", "https://cdnjs.cloudflare.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/chat/*", "https://claude.ai/chats/*"],
+      "js": ["turndown.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'"
+  }
+}
